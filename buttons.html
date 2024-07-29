@@ -3,11 +3,12 @@
 
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workhorse:wght@700&display=swap">
 
   <style>
     :root {
       --my-color: #13fc03;
-      --my-color-accent: #053002;
+      --my-color-accent: #0ae10c;
       --black: #3c3c3c;
       --black-accent: #2d2d2d;
       --blue: #809bce;
@@ -28,6 +29,18 @@
       --yellow-accent: #bd9a0c;
     }
 
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 5px var(--my-color), 0 0 10px var(--my-color), 0 0 20px var(--my-color), 0 0 40px var(--my-color), 0 0 80px var(--my-color), 0 0 160px var(--my-color);
+      }
+      50% {
+        box-shadow: 0 0 10px var(--my-color-accent), 0 0 20px var(--my-color-accent), 0 0 40px var(--my-color-accent), 0 0 80px var(--my-color-accent), 0 0 160px var(--my-color-accent);
+      }
+      100% {
+        box-shadow: 0 0 5px var(--my-color), 0 0 10px var(--my-color), 0 0 20px var(--my-color), 0 0 40px var(--my-color), 0 0 80px var(--my-color), 0 0 160px var(--my-color);
+      }
+    }
+
     button {
       background: none;
       color: inherit;
@@ -45,13 +58,15 @@
     .btn {
       text-align: center;
       color: #000000;
-      font-family: 'Sans-Serif Workhorse font';
+      font-family: 'Workhorse', sans-serif;
+      font-weight: 700;
       display: inline-block;
       margin: 10px;
     }
 
     .my-color {
       background-color: var(--my-color);
+      animation: glowing 1.5s infinite alternate;
     }
 
     .my-color:hover {
@@ -86,19 +101,18 @@
       font-size: 18px;
     }
   </style>
-
 </head>
 
 <body>
-
-  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-regular"></i>Buy $ROCK</button>
+  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()">
+    <i class="fa-regular fa-star"></i>Buy $ROCK
+  </button>
 
   <script>
     function navigate() {
       window.open("https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x724Af984b63FD53fDEdb5dEd17063001e3Afc3e5", '_blank').focus();
     }
   </script>
-
 </body>
 
 </html>
