@@ -65,10 +65,6 @@
       font-size: 1em;
     }
 
-    .facebook {
-      animation: strobeFacebook 3s infinite;
-    }
-
     .instagram {
       animation: strobeInstagram 3s infinite;
     }
@@ -93,15 +89,6 @@
       animation: strobeTelegram 3s infinite;
     }
 
-    @keyframes strobeFacebook {
-      0%,
-      100% {
-        background-color: rgba(0, 0, 0, 0);
-      }
-      14.3% {
-        background-color: #4267B2;
-      }
-    }
 
     @keyframes strobeInstagram {
       0%,
@@ -184,11 +171,6 @@
 
 <body>
   <div class="wrapper">
-    <!-- Start facebook Icon -->
-    <div id="facebook" onclick="navigate(this.id)" class="fill facebook">
-      <span class="icon"><i class="fab fa-facebook"></i></span>
-    </div>
-    <!-- End facebook Icon -->
 
     <!-- Start instagram Icon -->
     <div id="instagram" onclick="navigate(this.id)" class="fill instagram">
