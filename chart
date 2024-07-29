@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workhorse:wght@700&display=swap">
+
+  <style>
+    :root {
+      --my-color: #13fc03;
+      --my-color-accent: #0ae10c;
+      --my-color-strobe: #dfffdf;
+      --black: #3c3c3c;
+      --black-accent: #2d2d2d;
+      --blue: #809bce;
+      --blue-accent: #5c6f94;
+      --purple: #8a508f;
+      --purple-accent: #5d3661;
+      --mint: #b8e0d4;
+      --mint-accent: #8ba89f;
+      --pink: #eac4d5;
+      --pink-accent: #b495a3;
+      --green: #74a892;
+      --green-accent: #5e8675;
+      --red: #d74a49;
+      --red-accent: #b53f3f;
+      --orange: #d35400;
+      --orange-accent: #9e4102;
+      --yellow: #f1c40f;
+      --yellow-accent: #bd9a0c;
+    }
+
+    @keyframes strobe {
+      0% {
+        background-color: var(--my-color);
+      }
+      50% {
+        background-color: var(--my-color-strobe);
+      }
+      100% {
+        background-color: var(--my-color);
+      }
+    }
+
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+
+    i {
+      padding-right: 2px;
+    }
+
+    .btn {
+      text-align: center;
+      color: #000000;
+      font-family: 'Workhorse', sans-serif;
+      font-weight: 700;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .my-color {
+      background-color: var(--my-color);
+      animation: strobe 1s infinite;
+    }
+
+    .my-color:hover {
+      background-color: var(--my-color-accent);
+      animation: none;
+    }
+
+    .my-color.threeD {
+      box-shadow: 0px 4px 0px var(--my-color-accent);
+    }
+
+    .my-color.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--my-color-accent);
+    }
+
+    .rounded {
+      border-radius: 20px;
+    }
+
+    .small {
+      padding: 5px 20px;
+      font-size: 10px;
+    }
+
+    .mid {
+      padding: 10px 40px;
+      font-size: 12px;
+    }
+
+    .large {
+      padding: 15px 60px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()">
+    <i class="fa-regular"></i>Chart
+  </button>
+
+  <script>
+    function navigate() {
+      window.open("https://dexscreener.com/ethereum/0xcc2b006f5913a16a48591ea23dd7d3b1ad94e91e", '_blank').focus();
+    }
+  </script>
+</body>
+
+</html>
